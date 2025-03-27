@@ -20,8 +20,15 @@ const LoginPage = () => {
 
       const token = response.data.data.token; 
       localStorage.setItem("token",token);
-    
-      navigate("/account");
+      localStorage.setItem("type",response.data.data.user.role);
+      localStorage.setItem("id",response.data.data.user._id);
+      // navigate("/account");
+      if(localStorage.getItem("type")=="Admin"){
+        navigate("/admin");
+      }
+      else{
+        navigate("/user");
+      }
       setEmail("");
       setPassword("");
 

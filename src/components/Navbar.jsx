@@ -7,7 +7,7 @@ const Navbar = () => {
 
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    localStorage.clear();
     navigate('/login');
   };
 
@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="bg-black border-b border-gray-800 flex justify-between items-center text-white">
       <NavLink to="/">
         <div className="logo">
-          <img src="./WT.png" alt="To-Let Logo" className="h-20" /> 
+          <img src="./website.jpg" alt="To-Let Logo" className="h-20" /> 
           
         </div>
       </NavLink>
